@@ -1,0 +1,6 @@
+cd /
+cd /root/docjen/dockerdemo
+docker container stop helloworld
+docker container rm helloworld
+docker build -t hello-world /root/docjen/dockerdemo/
+docker container run -d --name helloworld -p 80:80 -v /root/docjen/dockerdemo/src:/var/www/html hello-world
